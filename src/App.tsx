@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Die from "./components/Die";
 
-function rollDie(){
-  return Math.floor(Math.random()*6) + 1;
+function rollDie() {
+  return Math.floor(Math.random() * 6) + 1;
 }
 
 function App() {
@@ -11,13 +11,13 @@ function App() {
 
   const total = die1 + die2;
 
-  function rollBoth(){
+  function rollBoth() {
     setDie1(rollDie());
     setDie2(rollDie());
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center text-3xl">
+    <div className="flex min-h-screen flex-col items-center justify-center gap-8 bg-green-700">
       <h1 className="text-4xl font-bold text-white">Dice Roller</h1>
 
       <div className="flex gap-6">
