@@ -9,13 +9,15 @@ const dotPositions: Record<number, number[]> = {
 
 interface DieProps {
   value: number;
+  onRoll: () => void;
 }
 
-function Die({ value }: DieProps) {
+function Die({ value, onRoll }: DieProps) {
   const dots = dotPositions[value] ?? [];
 
   return (
     <button
+      onClick={onRoll}
       className="grid grid-cols-3 grid-rows-3 gap-2 rounded-xl bg-white p-4 shadow-lg"
       style={{ width: "120px", height: "120px" }}
     >
