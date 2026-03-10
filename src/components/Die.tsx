@@ -18,6 +18,7 @@ function Die({ value, onRoll }: DieProps) {
   return (
     <button
       onClick={onRoll}
+      aria-label={`Roll die showing ${value}`}
       className="grid grid-cols-3 grid-rows-3 gap-2 rounded-xl bg-white p-4 shadow-lg"
       style={{ width: "120px", height: "120px" }}
     >
